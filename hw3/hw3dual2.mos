@@ -1,0 +1,35 @@
+model hw3prob5dual2
+uses "mmxprs";
+uses "mmsystem"
+
+
+declarations
+ fac = 1 .. 2
+ u : array(1..8) of mpvar
+ y : array(fac) of mpvar
+ c: array(1..8) of integer
+ w: array(1..8) of integer
+ obj : linctr
+end-declarations
+
+!Known values
+c::[10,7,13,17,19,21,6,8]
+w::[4,2,7,8,5,10,2,3]
+
+
+! write the linear constraints here:
+forall(i in 1..8)
+u(i)-(c(i)-y(1)*w(i)) >=0
+
+! The objective function should be linear
+obj := 25*y(1)+ sum(n in 1..8) u(n)
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..8) writeln(getsol(u(i)))
+writeln(getsol(y(1)))
+
+end-model

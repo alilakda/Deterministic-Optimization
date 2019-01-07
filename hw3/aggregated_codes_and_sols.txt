@@ -1,0 +1,361 @@
+model hw3prob5Primal1
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+ x : array(1..8) of mpvar
+ c : array(1..10) of real
+ w : array(1..10) of real
+ obj : linctr
+end-declarations
+
+!Known Values
+c :: [10, 7, 13, 17, 19, 21, 6, 8]
+w :: [4, 2, 7, 8, 5, 10, 2, 3]
+
+
+! write the linear constraints here:
+sum(i in 1..8)w(i)*x(i) <= 10
+forall(i in 1..8) x(i) is_binary
+
+! The objective function should be linear
+
+obj := sum(i in 1..8)c(i)*x(i)
+
+! solve the problem and print solution
+maximize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..8) writeln(getsol(x(i)))
+
+end-model
+
+
+###############################################################################
+
+Tue Oct 09 2018 20:44:35 GMT-0400 (EDT)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling hw3primal1.mos with -g
+Running model
+Solution: 34
+0
+1
+0
+0
+1
+0
+0
+1
+
+Process exited with code: 0
+
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+
+
+model hw3prob5dual1
+uses "mmxprs";
+uses "mmsystem"
+
+
+declarations
+ fac = 1 .. 2
+ u : array(1..8) of mpvar
+ y : array(fac) of mpvar
+ c: array(1..8) of integer
+ w: array(1..8) of integer
+ obj : linctr
+end-declarations
+
+!Known values
+c::[10,7,13,17,19,21,6,8]
+w::[4,2,7,8,5,10,2,3]
+
+
+! write the linear constraints here:
+forall(i in 1..8)
+u(i)-(c(i)-y(1)*w(i)) >=0
+
+! The objective function should be linear
+obj := 10*y(1)+ sum(n in 1..8) u(n)
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..8) writeln(getsol(u(i)))
+writeln(getsol(y(1)))
+
+end-model
+
+###############################################################################
+
+
+Tue Oct 09 2018 20:45:30 GMT-0400 (EDT)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling hw3dual1.mos with -g
+Running model
+Solution: 34.6667
+0
+1.66667
+0
+0
+5.66667
+0
+0.666667
+0
+2.66667
+
+Process exited with code: 0
+
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+
+model hw3prob5Primal2
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+ x : array(1..8) of mpvar
+ c : array(1..10) of real
+ w : array(1..10) of real
+ obj : linctr
+end-declarations
+
+!Known Values
+c :: [10, 7, 13, 17, 19, 21, 6, 8]
+w :: [4, 2, 7, 8, 5, 10, 2, 3]
+
+
+! write the linear constraints here:
+sum(i in 1..8)w(i)*x(i) <= 25
+forall(i in 1..8) x(i) is_binary
+
+! The objective function should be linear
+
+obj := sum(i in 1..8)c(i)*x(i)
+
+! solve the problem and print solution
+maximize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..8) writeln(getsol(x(i)))
+
+end-model
+
+###############################################################################
+
+Tue Oct 09 2018 20:46:15 GMT-0400 (EDT)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling hw3primal2.mos with -g
+Running model
+Solution: 67
+1
+1
+0
+1
+1
+0
+1
+1
+
+Process exited with code: 0
+
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+
+
+model hw3prob5dual2
+uses "mmxprs";
+uses "mmsystem"
+
+
+declarations
+ fac = 1 .. 2
+ u : array(1..8) of mpvar
+ y : array(fac) of mpvar
+ c: array(1..8) of integer
+ w: array(1..8) of integer
+ obj : linctr
+end-declarations
+
+!Known values
+c::[10,7,13,17,19,21,6,8]
+w::[4,2,7,8,5,10,2,3]
+
+
+! write the linear constraints here:
+forall(i in 1..8)
+u(i)-(c(i)-y(1)*w(i)) >=0
+
+! The objective function should be linear
+obj := 25*y(1)+ sum(n in 1..8) u(n)
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..8) writeln(getsol(u(i)))
+writeln(getsol(y(1)))
+
+end-model
+
+###############################################################################
+
+Tue Oct 09 2018 20:47:41 GMT-0400 (EDT)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling hw3dual2.mos with -g
+Running model
+Solution: 69.1
+1.6
+2.8
+0
+0.2
+8.5
+0
+1.8
+1.7
+2.1
+
+Process exited with code: 0
+
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+
+
+model hw3prob5Primal3
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+ x : array(1..8) of mpvar
+ c : array(1..10) of real
+ w : array(1..10) of real
+ obj : linctr
+end-declarations
+
+!Known Values
+c :: [10, 7, 13, 17, 19, 21, 6, 8]
+w :: [4, 2, 7, 8, 5, 10, 2, 3]
+
+
+! write the linear constraints here:
+sum(i in 1..8)w(i)*x(i) <= 35
+forall(i in 1..8) x(i) is_binary
+
+! The objective function should be linear
+
+obj := sum(i in 1..8)c(i)*x(i)
+
+! solve the problem and print solution
+maximize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..8) writeln(getsol(x(i)))
+
+end-model
+
+###############################################################################
+
+Tue Oct 09 2018 20:49:15 GMT-0400 (EDT)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling hw3primal3.mos with -g
+Running model
+Solution: 88
+1
+1
+0
+1
+1
+1
+1
+1
+
+Process exited with code: 0
+
+
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+
+
+model hw3prob5dual3
+uses "mmxprs";
+uses "mmsystem"
+
+
+declarations
+ fac = 1 .. 2
+ u : array(1..8) of mpvar
+ y : array(fac) of mpvar
+ c: array(1..8) of integer
+ w: array(1..8) of integer
+ obj : linctr
+end-declarations
+
+!Known values
+c::[10,7,13,17,19,21,6,8]
+w::[4,2,7,8,5,10,2,3]
+
+
+! write the linear constraints here:
+forall(i in 1..8)
+u(i)-(c(i)-y(1)*w(i)) >=0
+
+! The objective function should be linear
+obj := 35*y(1)+ sum(n in 1..8) u(n)
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..8) writeln(getsol(u(i)))
+writeln(getsol(y(1)))
+
+end-model
+
+###############################################################################
+
+
+Tue Oct 09 2018 20:49:58 GMT-0400 (EDT)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling hw3dual3.mos with -g
+Running model
+Solution: 89.8571
+2.57143
+3.28571
+0
+2.14286
+9.71429
+2.42857
+2.28571
+2.42857
+1.85714
+
+Process exited with code: 0
+
+

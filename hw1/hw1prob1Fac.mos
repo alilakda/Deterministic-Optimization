@@ -1,0 +1,55 @@
+model hw1prob1Fac !the name of the model
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver for solving linear programs
+
+declarations 
+  Objective:linctr !Objective is declared as a linear constraint, which is defined later in the code.
+  aux = 1 .. 10 ! number of auxiliary variables. This is a fixed range.
+  fac = 1 .. 2 ! number of new facilities. This is a fixed range.
+  x : array(fac) of mpvar !mpvar declares a variable, and Xpress automatically assumes a variable to be nonnegative
+  y : array(fac) of mpvar !array(fac) constructs an array of 2 elements 
+  z : array(aux) of mpvar
+end-declarations
+
+! define Objective function
+Objective := (z(1) + z(2)) + (z(3) + z(4)) + (z(5) + z(6)) + (z(7)+z(8)) + (z(9)+z(10))
+
+! define all the constraints (they need to be linear):
+x(1) <= 900
+x(2) <= 900
+y(1) <= 1500
+y(2) <= 1500
+
+x(1) - x(2) <= z(1)
+x(1) - x(2) >= -z(1)
+y(1) - y(2) <= z(2)
+y(1) - y(2) >= -z(2)
+x(1) - 300 <= z(3)
+x(1) - 300 >= -z(3)
+y(1) - 1200 <= z(4)
+y(1) - 1200 >= -z(4)
+x(1) <= z(5)
+x(1) >= -z(5)
+y(1) - 600 <= z(6)
+y(1) - 600 >= -z(6)
+x(2) <= z(7)
+x(2) >= -z(7)
+y(2) - 600 <= z(8)
+y(2) - 600 >= -z(8)
+x(2) - 600 <= z(9)
+x(2) - 600 >= -z(9)
+y(2) <= z(10)
+y(2) >= -z(10)
+
+z(3) + z(4) <= 500
+z(9) + z(10) <= 700
+
+! now we are ready to invoke the solver to minimize the objective function
+minimize (Objective)
+
+! if your model runs correctly, the following two lines of texts should be printed in Output/Input tab on the right
+writeln("Begin running model")
+writeln("End running model")
+! then the optimal solution of the problem should be printed in Output/Input tab
+forall (i in fac)
+	writeln("(x(",i,"),y(",i,"))=","(",getsol(x(i)),",",getsol(y(i)),")")
+end-model

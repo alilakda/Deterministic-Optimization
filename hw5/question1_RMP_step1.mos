@@ -1,0 +1,33 @@
+model hw4prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ x : array(1..2) of mpvar
+ theta : mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+theta is_free
+x(1) + x(2) <= 120
+x(1) >= 40
+x(2) >= 20
+theta >= -83.52*x(1) -180.48*x(2) - 520
+
+! The objective function should be linear
+
+obj := 100*x(1) + 150*x(2) + theta
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..2) writeln(getsol(x(i)))
+
+end-model
+
+

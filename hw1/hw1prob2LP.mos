@@ -1,0 +1,39 @@
+model hw1prob2LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ x : array(1..2) of mpvar
+ obj : linctr
+ z : array(1..3) of mpvar
+ x1 : array(1..10) of real
+ x2 : array(1..10) of real
+end-declarations
+
+! write the linear constraints here:
+ x1 :: [0.1, 0.15, 0.60, 0.75, 0.85, 0.14, 0.27, 0.30, 0.44, 0.37]
+ x2 :: [0.8, 0.45, 0.02, 0.05, 0.01, 0.49, 0.34, 0.09, 0.17, 0.12]
+forall(i in 1..10)
+(x1(i) - 1.5)^2 + (x2(i) - 0.8)^2 + 2*(x1(i) - 1.5)*(x(1) - x1(i)) + 2*(x2(i) - 0.8)*(x(2) - x2(i)) <= z(1)
+z(2) + z(3) <= 1
+x(1) >= -z(2)
+x(1) <= z(2)
+x(2) >= -z(3)
+x(2) <= z(3)
+z(2) >= 0
+z(3) >= 0
+
+! The objective function should be linear
+
+obj := z(1)
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..2) writeln(getsol(x(i)))
+
+end-model

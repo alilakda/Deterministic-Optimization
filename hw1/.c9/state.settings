@@ -1,0 +1,383 @@
+{
+    "ace": {
+        "search": {
+            "@backwards": "false",
+            "@highlightmatches": "true",
+            "@matchcase": "false",
+            "@preservecase": "false",
+            "@regex": "false",
+            "@wholeword": "false",
+            "@wraparound": "true"
+        }
+    },
+    "console": {
+        "@expanded": true,
+        "@height": "300",
+        "@maximized": "false",
+        "json()": {
+            "meta": {
+                "accessList": [
+                    "tab3",
+                    "tab13",
+                    "tab5",
+                    "tab6"
+                ]
+            },
+            "name": "pane1",
+            "nodes": [
+                {
+                    "type": "tab",
+                    "name": "tab3",
+                    "path": "",
+                    "className": [
+                        "tab3"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "hw1prob2LP.mos - Stopped",
+                        "tooltip": "hw1prob2LP.mos - Stopped",
+                        "output": {
+                            "id": "output156577",
+                            "width": 928,
+                            "height": 268,
+                            "scrollTop": -1,
+                            "selection": {
+                                "start": {
+                                    "row": 0,
+                                    "column": 0
+                                },
+                                "end": {
+                                    "row": 9,
+                                    "column": 27
+                                },
+                                "isBackwards": true
+                            },
+                            "config": {
+                                "runner": "Mosel",
+                                "command": "hw1prob2LP.mos",
+                                "debug": false,
+                                "toolbar": true,
+                                "name": ""
+                            }
+                        },
+                        "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+                        "meta": {
+                            "timestamp": 1536347697290
+                        },
+                        "changed": false
+                    },
+                    "editorType": "output",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab5",
+                    "path": "",
+                    "className": [
+                        "tab5"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "hw1prob2QP.mos - Stopped",
+                        "tooltip": "hw1prob2QP.mos - Stopped",
+                        "output": {
+                            "id": "output8476820",
+                            "width": 928,
+                            "height": 268,
+                            "scrollTop": -1,
+                            "config": {
+                                "runner": "Mosel",
+                                "command": "hw1prob2QP.mos",
+                                "debug": false,
+                                "toolbar": true,
+                                "name": ""
+                            }
+                        },
+                        "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+                        "meta": {
+                            "timestamp": 1536348121538
+                        },
+                        "changed": false
+                    },
+                    "editorType": "output",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab6",
+                    "path": "",
+                    "className": [
+                        "tab6"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "Compile - Idle",
+                        "tooltip": "Compile - Idle",
+                        "output": {
+                            "id": "build",
+                            "width": 928,
+                            "height": 268,
+                            "scrollTop": -1,
+                            "config": {
+                                "name": "Compile",
+                                "toolbar": false,
+                                "command": ""
+                            }
+                        },
+                        "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+                        "meta": {
+                            "timestamp": 1536348890319
+                        },
+                        "changed": false
+                    },
+                    "editorType": "output",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab13",
+                    "path": "",
+                    "className": [
+                        "tab13"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1536360084328
+                        },
+                        "filter": true,
+                        "title": "hw1prob3.mos - Idle",
+                        "tooltip": "hw1prob3.mos - Idle",
+                        "output": {
+                            "id": "output995790",
+                            "width": 928,
+                            "height": 268,
+                            "config": {
+                                "runner": "Mosel",
+                                "command": "hw1prob3.mos",
+                                "debug": false,
+                                "toolbar": true,
+                                "name": ""
+                            }
+                        }
+                    },
+                    "editorType": "output",
+                    "active": true
+                }
+            ],
+            "skin": "editor_tab",
+            "skinset": "default",
+            "type": "pane"
+        }
+    },
+    "ext": {
+        "counters": {
+            "@ace": 1,
+            "@acestatus": 1,
+            "@divider": 4,
+            "@document": 9,
+            "@form": 4,
+            "@menu": 3,
+            "@menuitem": 8,
+            "@pane": 2,
+            "@session": 5,
+            "@tab": 14,
+            "@undoManager": 9,
+            "@welcome": 1
+        }
+    },
+    "findinfiles": {
+        "@console": "true",
+        "@matchcase": "false",
+        "@regex": "false",
+        "@scope": "selection",
+        "@wholeword": "false"
+    },
+    "menus": {
+        "@minimized": "false"
+    },
+    "nak": {
+        "@installed": true
+    },
+    "od": {
+        "@last-run-config": "path:hw1prob1Fac.mos"
+    },
+    "panecycle": {
+        "json()": [
+            "tab12",
+            "tab13"
+        ]
+    },
+    "panels": {
+        "@active-left": "tree",
+        "@active-right": "none",
+        "commands.panel": {
+            "@enabled": "true",
+            "@name": "commands.panel"
+        },
+        "debugger": {
+            "@enabled": "true",
+            "@name": "debugger"
+        },
+        "fico.om.sidebar": {
+            "@enabled": "true",
+            "@name": "fico.om.sidebar"
+        },
+        "navigate": {
+            "@enabled": "true",
+            "@name": "navigate"
+        },
+        "outline": {
+            "@enabled": "true",
+            "@name": "outline"
+        },
+        "tree": {
+            "@enabled": "true",
+            "@name": "tree"
+        }
+    },
+    "projecttree": {
+        "expanded": {
+            "json()": [
+                "/"
+            ]
+        }
+    },
+    "recentfiles": {
+        "json()": []
+    },
+    "tabs": {
+        "json()": {
+            "focus": "/hw1prob1Fac.mos",
+            "meta": {
+                "accessList": [
+                    "tab12",
+                    "tab11",
+                    "tab10",
+                    "tab9",
+                    "tab0"
+                ]
+            },
+            "name": "pane0",
+            "nodes": [
+                {
+                    "type": "tab",
+                    "name": "tab0",
+                    "path": "/readme.html",
+                    "className": [
+                        "tab0",
+                        "changed"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "Welcome",
+                        "tooltip": "/readme.html",
+                        "welcome": {},
+                        "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+                        "meta": {
+                            "welcome": true,
+                            "newOnError": true,
+                            "newfile": true,
+                            "timestamp": 1536193535911
+                        },
+                        "changed": false
+                    },
+                    "editorType": "welcome",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab9",
+                    "path": "/hw1prob2QP.mos",
+                    "className": [
+                        "tab9"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1536358786000
+                        },
+                        "filter": true,
+                        "title": "hw1prob2QP.mos",
+                        "tooltip": "/hw1prob2QP.mos",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab10",
+                    "path": "/hw1prob3.mos",
+                    "className": [
+                        "tab10"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1536372205000
+                        },
+                        "filter": true,
+                        "title": "hw1prob3.mos",
+                        "tooltip": "/hw1prob3.mos",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab11",
+                    "path": "/hw1prob2LP.mos",
+                    "className": [
+                        "tab11"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1536358784000
+                        },
+                        "filter": true,
+                        "title": "hw1prob2LP.mos",
+                        "tooltip": "/hw1prob2LP.mos",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab12",
+                    "path": "/hw1prob1Fac.mos",
+                    "className": [
+                        "tab12",
+                        "focus"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1536345153000
+                        },
+                        "filter": true,
+                        "title": "hw1prob1Fac.mos",
+                        "tooltip": "/hw1prob1Fac.mos",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": true
+                }
+            ],
+            "skin": "editor_tab",
+            "skinset": "default",
+            "type": "pane"
+        }
+    },
+    "tree_selection": {
+        "json()": [
+            "/"
+        ]
+    },
+    "welcome": {
+        "@first": true
+    }
+}

@@ -1,0 +1,240 @@
+{
+    "console": {
+        "@expanded": true,
+        "@height": "300",
+        "@maximized": "false",
+        "json()": {
+            "meta": {
+                "accessList": [
+                    "tab3"
+                ]
+            },
+            "name": "pane1",
+            "nodes": [
+                {
+                    "type": "tab",
+                    "name": "tab3",
+                    "path": "",
+                    "className": [
+                        "tab3"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1536988270919
+                        },
+                        "filter": true,
+                        "title": "regression_partial.mos - Idle",
+                        "tooltip": "regression_partial.mos - Idle",
+                        "output": {
+                            "id": "output441830",
+                            "width": 928,
+                            "height": 268,
+                            "config": {
+                                "runner": "Mosel",
+                                "command": "regression_partial.mos",
+                                "debug": false,
+                                "toolbar": true
+                            }
+                        }
+                    },
+                    "editorType": "output",
+                    "active": true
+                }
+            ],
+            "skin": "editor_tab",
+            "skinset": "default",
+            "type": "pane"
+        }
+    },
+    "ext": {
+        "counters": {
+            "@ace": 1,
+            "@acestatus": 1,
+            "@divider": 4,
+            "@document": 5,
+            "@form": 4,
+            "@menu": 3,
+            "@menuitem": 8,
+            "@pane": 2,
+            "@session": 4,
+            "@tab": 5,
+            "@undoManager": 5,
+            "@welcome": 1
+        }
+    },
+    "findinfiles": {
+        "@console": "true",
+        "@matchcase": "false",
+        "@regex": "false",
+        "@scope": "selection",
+        "@wholeword": "false"
+    },
+    "menus": {
+        "@minimized": "false"
+    },
+    "nak": {
+        "@installed": true
+    },
+    "panecycle": {
+        "json()": [
+            "tab4",
+            "tab3"
+        ]
+    },
+    "panels": {
+        "@active-left": "tree",
+        "@active-right": "none",
+        "commands.panel": {
+            "@enabled": "true",
+            "@name": "commands.panel"
+        },
+        "debugger": {
+            "@enabled": "true",
+            "@name": "debugger"
+        },
+        "fico.om.sidebar": {
+            "@enabled": "true",
+            "@name": "fico.om.sidebar"
+        },
+        "navigate": {
+            "@enabled": "true",
+            "@name": "navigate"
+        },
+        "outline": {
+            "@enabled": "true",
+            "@name": "outline"
+        },
+        "tree": {
+            "@enabled": "true",
+            "@name": "tree"
+        }
+    },
+    "projecttree": {
+        "expanded": {
+            "json()": [
+                "/"
+            ]
+        }
+    },
+    "recentfiles": {
+        "json()": []
+    },
+    "tabs": {
+        "json()": {
+            "focus": "/regression_partial.mos",
+            "meta": {
+                "accessList": [
+                    "tab4",
+                    "tab1",
+                    "tab2",
+                    "tab0"
+                ]
+            },
+            "name": "pane0",
+            "nodes": [
+                {
+                    "type": "tab",
+                    "name": "tab0",
+                    "path": "/readme.html",
+                    "className": [
+                        "tab0",
+                        "changed"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "Welcome",
+                        "tooltip": "/readme.html",
+                        "welcome": {},
+                        "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+                        "meta": {
+                            "welcome": true,
+                            "newOnError": true,
+                            "newfile": true,
+                            "timestamp": 1539039588916
+                        },
+                        "changed": false
+                    },
+                    "editorType": "welcome",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab1",
+                    "path": "/Untitled1",
+                    "className": [
+                        "changed",
+                        "tab1"
+                    ],
+                    "document": {
+                        "changed": true,
+                        "meta": {
+                            "newfile": true,
+                            "timestamp": 1539039597849
+                        },
+                        "filter": true,
+                        "title": "Untitled1",
+                        "tooltip": "/Untitled1",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab2",
+                    "path": "/Untitled2",
+                    "className": [
+                        "changed",
+                        "tab2"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "newfile": true,
+                            "timestamp": 1539039657308
+                        },
+                        "filter": true,
+                        "title": "Untitled2",
+                        "tooltip": "/Untitled2",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab4",
+                    "path": "/regression_partial.mos",
+                    "className": [
+                        "tab4",
+                        "focus"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1539042841755
+                        },
+                        "filter": true,
+                        "title": "regression_partial.mos",
+                        "tooltip": "/regression_partial.mos",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": true
+                }
+            ],
+            "skin": "editor_tab",
+            "skinset": "default",
+            "type": "pane"
+        }
+    },
+    "tree_selection": {
+        "json()": [
+            "/"
+        ]
+    },
+    "welcome": {
+        "@first": true
+    }
+}

@@ -1,0 +1,491 @@
+{
+    "console": {
+        "@expanded": true,
+        "@height": "300",
+        "@maximized": "false",
+        "json()": {
+            "meta": {
+                "accessList": [
+                    "tab14",
+                    "tab27",
+                    "tab16",
+                    "tab17",
+                    "tab19",
+                    "tab21",
+                    "tab23",
+                    "tab25",
+                    "tab29"
+                ]
+            },
+            "name": "pane1",
+            "nodes": [
+                {
+                    "type": "tab",
+                    "name": "tab14",
+                    "path": "",
+                    "className": [
+                        "tab14"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "question1_RMP_step2.mos - Stopped",
+                        "tooltip": "question1_RMP_step2.mos - Stopped",
+                        "output": {
+                            "id": "output4035117",
+                            "width": 928,
+                            "height": 268,
+                            "scrollTop": -1,
+                            "config": {
+                                "runner": "Mosel",
+                                "command": "question1_RMP_step2.mos",
+                                "debug": false,
+                                "toolbar": true,
+                                "name": ""
+                            }
+                        },
+                        "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+                        "meta": {
+                            "timestamp": 1540079846287
+                        },
+                        "changed": false
+                    },
+                    "editorType": "output",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab16",
+                    "path": "",
+                    "className": [
+                        "tab16"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "question1_Pricing_step1.mos - Stopped",
+                        "tooltip": "question1_Pricing_step1.mos - Stopped",
+                        "output": {
+                            "id": "output3945418",
+                            "width": 928,
+                            "height": 268,
+                            "scrollTop": -1,
+                            "config": {
+                                "runner": "Mosel",
+                                "command": "question1_Pricing_step1.mos",
+                                "debug": false,
+                                "toolbar": true,
+                                "name": ""
+                            }
+                        },
+                        "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+                        "meta": {
+                            "timestamp": 1540080250446
+                        },
+                        "changed": false
+                    },
+                    "editorType": "output",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab17",
+                    "path": "",
+                    "className": [
+                        "tab17"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "question1_Pricing_step2.mos - Stopped",
+                        "tooltip": "question1_Pricing_step2.mos - Stopped",
+                        "output": {
+                            "id": "output2601819",
+                            "width": 928,
+                            "height": 268,
+                            "scrollTop": -1,
+                            "config": {
+                                "runner": "Mosel",
+                                "command": "question1_Pricing_step2.mos",
+                                "debug": false,
+                                "toolbar": true,
+                                "name": ""
+                            }
+                        },
+                        "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+                        "meta": {
+                            "timestamp": 1540080417266
+                        },
+                        "changed": false
+                    },
+                    "editorType": "output",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab19",
+                    "path": "",
+                    "className": [
+                        "tab19"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "question1_RMP_step3.mos - Stopped",
+                        "tooltip": "question1_RMP_step3.mos - Stopped",
+                        "output": {
+                            "id": "output1581123",
+                            "width": 928,
+                            "height": 268,
+                            "scrollTop": -1,
+                            "config": {
+                                "runner": "Mosel",
+                                "command": "question1_RMP_step3.mos",
+                                "debug": false,
+                                "toolbar": true,
+                                "name": ""
+                            }
+                        },
+                        "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+                        "meta": {
+                            "timestamp": 1540080982837
+                        },
+                        "changed": false
+                    },
+                    "editorType": "output",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab21",
+                    "path": "",
+                    "className": [
+                        "tab21"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "question1_Pricing_step3.mos - Stopped",
+                        "tooltip": "question1_Pricing_step3.mos - Stopped",
+                        "output": {
+                            "id": "output6844224",
+                            "width": 928,
+                            "height": 268,
+                            "scrollTop": -1,
+                            "config": {
+                                "runner": "Mosel",
+                                "command": "question1_Pricing_step3.mos",
+                                "debug": false,
+                                "toolbar": true,
+                                "name": ""
+                            }
+                        },
+                        "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+                        "meta": {
+                            "timestamp": 1540081827590
+                        },
+                        "changed": false
+                    },
+                    "editorType": "output",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab23",
+                    "path": "",
+                    "className": [
+                        "tab23"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "question1_RMP_step4.mos - Stopped",
+                        "tooltip": "question1_RMP_step4.mos - Stopped",
+                        "output": {
+                            "id": "output9158026",
+                            "width": 928,
+                            "height": 268,
+                            "scrollTop": 8,
+                            "config": {
+                                "runner": "Mosel",
+                                "command": "question1_RMP_step4.mos",
+                                "debug": false,
+                                "toolbar": true,
+                                "name": ""
+                            }
+                        },
+                        "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+                        "meta": {
+                            "timestamp": 1540082101885
+                        },
+                        "changed": false
+                    },
+                    "editorType": "output",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab25",
+                    "path": "",
+                    "className": [
+                        "tab25"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "question1_Pricing_step4.mos - Stopped",
+                        "tooltip": "question1_Pricing_step4.mos - Stopped",
+                        "output": {
+                            "id": "output4749429",
+                            "width": 928,
+                            "height": 268,
+                            "scrollTop": -1,
+                            "config": {
+                                "runner": "Mosel",
+                                "command": "question1_Pricing_step4.mos",
+                                "debug": false,
+                                "toolbar": true,
+                                "name": ""
+                            }
+                        },
+                        "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+                        "meta": {
+                            "timestamp": 1540082859380
+                        },
+                        "changed": false
+                    },
+                    "editorType": "output",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab27",
+                    "path": "",
+                    "className": [
+                        "tab27"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1540083258890
+                        },
+                        "filter": true,
+                        "title": "question1_RMP_step5.mos - Idle",
+                        "tooltip": "question1_RMP_step5.mos - Idle",
+                        "output": {
+                            "id": "output3288931",
+                            "width": 928,
+                            "height": 268,
+                            "config": {
+                                "runner": "Mosel",
+                                "command": "question1_RMP_step5.mos",
+                                "debug": false,
+                                "toolbar": true,
+                                "name": ""
+                            }
+                        }
+                    },
+                    "editorType": "output",
+                    "active": true
+                },
+                {
+                    "type": "tab",
+                    "name": "tab29",
+                    "path": "",
+                    "className": [
+                        "tab29"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "question1_Pricing_step5.mos - Stopped",
+                        "tooltip": "question1_Pricing_step5.mos - Stopped",
+                        "output": {
+                            "id": "output3375533",
+                            "width": 928,
+                            "height": 268,
+                            "scrollTop": -1,
+                            "config": {
+                                "runner": "Mosel",
+                                "command": "question1_Pricing_step5.mos",
+                                "debug": false,
+                                "toolbar": true,
+                                "name": ""
+                            }
+                        },
+                        "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+                        "meta": {
+                            "timestamp": 1540083720012
+                        },
+                        "changed": false
+                    },
+                    "editorType": "output",
+                    "active": false
+                }
+            ],
+            "skin": "editor_tab",
+            "skinset": "default",
+            "type": "pane"
+        }
+    },
+    "ext": {
+        "counters": {
+            "@ace": 1,
+            "@acestatus": 1,
+            "@divider": 4,
+            "@document": 12,
+            "@form": 4,
+            "@menu": 3,
+            "@menuitem": 8,
+            "@pane": 2,
+            "@session": 3,
+            "@tab": 2,
+            "@undoManager": 12,
+            "@welcome": 1
+        }
+    },
+    "findinfiles": {
+        "@console": "true",
+        "@matchcase": "false",
+        "@regex": "false",
+        "@scope": "selection",
+        "@wholeword": "false"
+    },
+    "menus": {
+        "@minimized": "false"
+    },
+    "nak": {
+        "@installed": true
+    },
+    "od": {
+        "@last-run-config": "path:question1_RMP_step5.mos"
+    },
+    "panecycle": {
+        "json()": [
+            "tab1",
+            "tab27"
+        ]
+    },
+    "panels": {
+        "@active-left": "tree",
+        "@active-right": "none",
+        "commands.panel": {
+            "@enabled": "true",
+            "@name": "commands.panel"
+        },
+        "debugger": {
+            "@enabled": "true",
+            "@name": "debugger"
+        },
+        "fico.om.sidebar": {
+            "@enabled": "true",
+            "@name": "fico.om.sidebar"
+        },
+        "navigate": {
+            "@enabled": "true",
+            "@name": "navigate"
+        },
+        "outline": {
+            "@enabled": "true",
+            "@name": "outline"
+        },
+        "tree": {
+            "@enabled": "true",
+            "@name": "tree"
+        }
+    },
+    "projecttree": {
+        "expanded": {
+            "json()": [
+                "/"
+            ]
+        }
+    },
+    "recentfiles": {
+        "json()": []
+    },
+    "tabs": {
+        "json()": {
+            "focus": "/question1_Pricing_step1.mos",
+            "meta": {
+                "accessList": [
+                    "tab1",
+                    "tab9",
+                    "tab0"
+                ]
+            },
+            "name": "pane0",
+            "nodes": [
+                {
+                    "type": "tab",
+                    "name": "tab0",
+                    "path": "/readme.html",
+                    "className": [
+                        "tab0",
+                        "changed"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "Welcome",
+                        "tooltip": "/readme.html",
+                        "welcome": {},
+                        "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+                        "meta": {
+                            "welcome": true,
+                            "newOnError": true,
+                            "newfile": true,
+                            "timestamp": 1540075284109
+                        },
+                        "changed": false
+                    },
+                    "editorType": "welcome",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab9",
+                    "path": "/question1_RMP_step5.mos",
+                    "className": [
+                        "tab9"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1540083252000
+                        },
+                        "filter": true,
+                        "title": "question1_RMP_step5.mos",
+                        "tooltip": "/question1_RMP_step5.mos",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab1",
+                    "path": "/question1_Pricing_step1.mos",
+                    "className": [
+                        "tab1",
+                        "focus"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1540079687000
+                        },
+                        "filter": true,
+                        "title": "question1_Pricing_step1.mos",
+                        "tooltip": "/question1_Pricing_step1.mos",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": true
+                }
+            ],
+            "skin": "editor_tab",
+            "skinset": "default",
+            "type": "pane"
+        }
+    },
+    "tree_selection": {
+        "json()": [
+            "/question1_RMP_step5.mos"
+        ]
+    },
+    "welcome": {
+        "@first": true
+    }
+}

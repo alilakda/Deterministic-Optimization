@@ -1,0 +1,49 @@
+model robustregression !the name of the model
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver for solving linear programs
+
+declarations !you may need to define more variables
+  Objective:linctr !Objective is declared as a linear constraint, which should be defined later in the code.
+  coeff = 1 .. 3 ! number of coefficients in the regression model
+  x : array(1..100,1..2) of real ! data points x
+  y : array(1..100) of real ! data points label y
+  b : array(coeff) of mpvar ! variables for the coefficients of the linear classifier, corresponds to beta's in the homework
+  z : array(1..100) of mpvar   !you may need to define more variables
+  end-declarations
+
+initializations from 'regression.dat'
+    x y
+end-initializations
+
+forall (i in 1..3)
+    b(i) is_free ! remember that Xpress always assumes a variable to be nonnegative unless defined otherwise
+
+
+! define Objective function
+Objective := sum(l in 1..100)z(l)
+
+
+! reformulate the original objective function as linear inequalities
+forall(i in 1..100)
+z(i) >= y(i) - b(1) - b(2)*x(i, 1) - b(3)*x(i, 2)
+
+forall(k in 1..100)
+-z(k) <= y(k) - b(1) - b(2)*x(k, 1) - b(3)*x(k, 2)
+
+
+
+! now we are ready to invoke the solver to minimize the objective function
+minimize (Objective)
+
+
+! if your model runs correctly, the following two lines of texts should be printed in Output/Input tab on the right
+writeln("Begin running model")
+writeln("End running model")
+! then the optimal solution of the problem should be printed in Output/Input tab
+forall (i in coeff)
+    writeln("b(",i,")=",getsol(b(i)))
+writeln("obj", getobjval)
+
+
+end-model
+
+

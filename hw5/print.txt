@@ -1,0 +1,1376 @@
+Subproblem1 Step 1:
+################################################################################
+model hw5prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ y : array(1..2) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+
+6*y(1) + 10*y(2) <= 2400
+8*y(1) + 5*y(2) <= 1600
+y(1) >= 0
+y(1) <= 500
+y(2) >= 0
+y(2) <= 100
+
+
+! The objective function should be linear
+
+obj := -24*y(1) - 28*y(2)
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..2) writeln(getsol(y(i)))
+
+end-model
+################################################################################
+Wed Nov 28 2018 09:11:48 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_subproblem1_step1.mos with -g
+Running model
+Solution: -6100
+137.5
+100
+
+Process exited with code: 0
+################################################################################
+Dual1 Step 1:
+################################################################################
+model hw5prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ z : array(1..4) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+
+forall (i in 1..4)
+z(i) is_free
+
+6*z(1) + 8*z(2) + z(3)  <=  -24
+10*z(1) + 5*z(2) + z(4) <= -28
+forall (i in 1..4)
+z(i) <= 0
+
+
+! The objective function should be linear
+
+obj := 2400*z(1) + 1600*z(2) + 500*z(3) + 100*z(4)
+
+! solve the problem and print solution
+maximize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..4 ) writeln(getsol(z(i)))
+
+end-model
+################################################################################
+Wed Nov 28 2018 09:12:49 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_subproblem1_dual_step1.mos with -g
+Running model
+Solution: -6100
+0
+-3
+0
+-13
+
+Process exited with code: 0
+################################################################################
+Subproblem2 Step 1:
+################################################################################
+model hw5prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ y : array(1..2) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+
+6*y(1) + 10*y(2) <= 60*40
+8*y(1) + 5*y(2) <= 80*20
+y(1) >= 0
+y(1) <= 300
+y(2) >= 0
+y(2) <= 300
+
+
+! The objective function should be linear
+
+obj := -28*y(1) - 32*y(2)
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..2) writeln(getsol(y(i)))
+
+end-model
+################################################################################
+Wed Nov 28 2018 09:13:57 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_subproblem2_step1.mos with -g
+Running model
+Solution: -8384
+80
+192
+
+Process exited with code: 0
+################################################################################
+Dual2 Step 1:
+model hw5prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ z : array(1..4) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+
+forall (i in 1..4)
+z(i) is_free
+
+6*z(1) + 8*z(2) + z(3)  <=  -28
+10*z(1) + 5*z(2) + z(4) <= -32
+forall (i in 1..4)
+z(i) <= 0
+
+
+! The objective function should be linear
+
+obj := 2400*z(1) + 1600*z(2) + 300*z(3) + 300*z(4)
+
+! solve the problem and print solution
+maximize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..4 ) writeln(getsol(z(i)))
+
+end-model
+################################################################################
+Wed Nov 28 2018 09:16:56 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_subproblem2_dual_step1.mos with -g
+Running model
+Solution: -8384
+-2.32
+-1.76
+0
+0
+
+Process exited with code: 0
+################################################################################
+RMP Step 1:
+################################################################################
+model hw4prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ x : array(1..2) of mpvar
+ theta : mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+theta is_free
+x(1) + x(2) <= 120
+x(1) >= 40
+x(2) >= 20
+theta >= -83.52*x(1) -180.48*x(2) - 520
+
+! The objective function should be linear
+
+obj := 100*x(1) + 150*x(2) + theta
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..2) writeln(getsol(x(i)))
+
+end-model
+################################################################################
+Wed Nov 28 2018 09:17:53 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_RMP_step1.mos with -g
+Running model
+Solution: -2299.2
+40
+80
+
+Process exited with code: 0
+################################################################################
+
+
+
+
+
+Subproblem1 Step 2:
+################################################################################
+model hw5prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ y : array(1..2) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+
+6*y(1) + 10*y(2) <= 60*40
+8*y(1) + 5*y(2) <= 80*80
+y(1) <= 500
+y(2) >= 0
+y(2) <= 100
+
+
+! The objective function should be linear
+
+obj := -24*y(1) - 28*y(2)
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..2) writeln(getsol(y(i)))
+
+end-model
+
+################################################################################
+Wed Nov 28 2018 09:22:27 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_subproblem1_step2.mos with -g
+Running model
+Solution: -9600
+400
+0
+
+Process exited with code: 0
+################################################################################
+Dual1 Step 2:
+################################################################################
+model hw5prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ z : array(1..4) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+
+forall (i in 1..4)
+z(i) is_free
+
+6*z(1) + 8*z(2) + z(3)  <=  -24
+10*z(1) + 5*z(2) + z(4) <= -28
+forall (i in 1..4)
+z(i) <= 0
+
+
+! The objective function should be linear
+
+obj := 60*40*z(1) + 80*80*z(2) + 500*z(3) + 100*z(4)
+
+! solve the problem and print solution
+maximize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..4 ) writeln(getsol(z(i)))
+
+end-model
+
+################################################################################
+Wed Nov 28 2018 09:22:57 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_subproblem1_dual_step2.mos with -g
+Running model
+Solution: -9600
+-4
+0
+0
+0
+
+Process exited with code: 0
+################################################################################
+Subproblem2 Step 2:
+################################################################################
+model hw5prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ y : array(1..2) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+
+6*y(1) + 10*y(2) <= 60*40
+8*y(1) + 5*y(2) <= 80*80
+y(1) >= 0
+y(1) <= 300
+y(2) >= 0
+y(2) <= 300
+
+
+! The objective function should be linear
+
+obj := -28*y(1) - 32*y(2)
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..2) writeln(getsol(y(i)))
+
+end-model
+
+################################################################################
+Wed Nov 28 2018 09:25:22 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_subproblem2_step2.mos with -g
+Running model
+Solution: -10320
+300
+60
+
+Process exited with code: 0
+################################################################################
+Dual2 Step 2:
+model hw5prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ z : array(1..4) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+
+forall (i in 1..4)
+z(i) is_free
+
+6*z(1) + 8*z(2) + z(3)  <=  -28
+10*z(1) + 5*z(2) + z(4) <= -32
+forall (i in 1..4)
+z(i) <= 0
+
+
+! The objective function should be linear
+
+obj := 60*40*z(1) + 80*80*z(2) + 300*z(3) + 300*z(4)
+
+! solve the problem and print solution
+maximize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..4 ) writeln(getsol(z(i)))
+
+end-model
+
+################################################################################
+Wed Nov 28 2018 09:25:57 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_subproblem2_dual_step2.mos with -g
+Running model
+Solution: -10320
+-3.2
+0
+-8.8
+0
+
+Process exited with code: 0
+################################################################################
+RMP Step 2:
+################################################################################
+model hw4prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ x : array(1..2) of mpvar
+ theta : mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+theta is_free
+
+x(1) + x(2) <= 120
+x(1) >= 40
+x(2) >= 20
+theta >= -83.52*x(1) -180.48*x(2) - 520
+theta >= -211.2*x(1) - 1584
+
+! The objective function should be linear
+
+obj := 100*x(1) + 150*x(2) + theta
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..2) writeln(getsol(x(i)))
+
+end-model
+
+################################################################################
+Wed Nov 28 2018 09:26:23 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_RMP_step2.mos with -g
+Running model
+Solution: -1039.37
+66.8276
+53.1724
+
+Process exited with code: 0
+
+################################################################################
+
+
+
+
+
+
+
+
+
+
+
+Subproblem1 Step 3:
+################################################################################
+model hw5prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ z : array(1..4) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+
+forall (i in 1..4)
+z(i) is_free
+
+6*z(1) + 8*z(2) + z(3)  <=  -24
+10*z(1) + 5*z(2) + z(4) <= -28
+forall (i in 1..4)
+z(i) <= 0
+
+
+! The objective function should be linear
+
+obj := 60*66.8276*z(1) + 80*53.1724*z(2) + 500*z(3) + 100*z(4)
+
+! solve the problem and print solution
+maximize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..4 ) writeln(getsol(z(i)))
+
+end-model
+
+################################################################################
+Wed Nov 28 2018 09:27:58 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_subproblem1_dual_step3.mos with -g
+Running model
+Solution: -14061.4
+0
+-3
+0
+-13
+
+Process exited with code: 0
+################################################################################
+Dual1 Step 3:
+################################################################################
+model hw5prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ z : array(1..4) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+
+forall (i in 1..4)
+z(i) is_free
+
+6*z(1) + 8*z(2) + z(3)  <=  -28
+10*z(1) + 5*z(2) + z(4) <= -32
+forall (i in 1..4)
+z(i) <= 0
+
+
+! The objective function should be linear
+
+obj := 60*66.8276*z(1) + 80*53.1724*z(2) + 300*z(3) + 300*z(4)
+
+! solve the problem and print solution
+maximize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..4 ) writeln(getsol(z(i)))
+
+end-model
+
+################################################################################
+Wed Nov 28 2018 09:29:01 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_subproblem1_dual_step3.mos with -g
+Running model
+Solution: -14061.4
+0
+-3
+0
+-13
+
+Process exited with code: 0
+
+################################################################################
+Subproblem2 Step 3:
+################################################################################
+model hw5prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ y : array(1..2) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+
+6*y(1) + 10*y(2) <= 60*66.8276
+8*y(1) + 5*y(2) <= 80*53.1724
+y(1) >= 0
+y(1) <= 300
+y(2) >= 0
+y(2) <= 300
+
+
+! The objective function should be linear
+
+obj := -28*y(1) - 32*y(2)
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..2) writeln(getsol(y(i)))
+
+end-model
+
+################################################################################
+Wed Nov 28 2018 09:29:32 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_subproblem2_step3.mos with -g
+Running model
+Solution: -15470.9
+300
+220.966
+
+Process exited with code: 0
+################################################################################
+Dual2 Step 3:
+model hw5prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ y : array(1..2) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+
+6*y(1) + 10*y(2) <= 60*66.8276
+8*y(1) + 5*y(2) <= 80*53.1724
+y(1) >= 0
+y(1) <= 300
+y(2) >= 0
+y(2) <= 300
+
+
+! The objective function should be linear
+
+obj := -28*y(1) - 32*y(2)
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..2) writeln(getsol(y(i)))
+
+end-model
+
+################################################################################
+Wed Nov 28 2018 09:31:14 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_subproblem2_dual_step3.mos with -g
+Running model
+Solution: -15470.9
+-3.2
+0
+-8.8
+0
+
+Process exited with code: 0
+################################################################################
+RMP Step 3:
+################################################################################
+model hw4prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ x : array(1..2) of mpvar
+ theta : mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+theta is_free
+x(1) + x(2) <= 120
+x(1) >= 40
+x(2) >= 20
+theta >= -83.52*x(1) -180.48*x(2) - 520
+theta >= -211.2*x(1) - 1584
+theta >= -96*x(2) - 115.2*x(1) - 2104
+
+
+! The objective function should be linear
+
+obj := 100*x(1) + 150*x(2) + theta
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..2) writeln(getsol(x(i)))
+
+end-model
+
+
+################################################################################
+Wed Nov 28 2018 09:31:46 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_RMP_step3.mos with -g
+Running model
+Solution: -889.5
+40
+33.75
+
+Process exited with code: 0
+################################################################################
+
+
+
+
+
+
+
+
+
+Subproblem1 Step 4:
+################################################################################
+model hw5prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ y : array(1..2) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+
+6*y(1) + 10*y(2) <= 60*40
+8*y(1) + 5*y(2) <= 80*33.75
+y(1) >= 0
+y(1) <= 500
+y(2) >= 0
+y(2) <= 100
+
+
+! The objective function should be linear
+
+obj := -24*y(1) - 28*y(2)
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..2) writeln(getsol(y(i)))
+
+end-model
+
+################################################################################
+Wed Nov 28 2018 09:34:24 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_subproblem1_step4.mos with -g
+Running model
+Solution: -8880
+300
+60
+
+Process exited with code: 0
+################################################################################
+Dual1 Step 4:
+################################################################################
+model hw5prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ z : array(1..4) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+
+forall (i in 1..4)
+z(i) is_free
+
+6*z(1) + 8*z(2) + z(3)  <=  -24
+10*z(1) + 5*z(2) + z(4) <= -28
+forall (i in 1..4)
+z(i) <= 0
+
+
+! The objective function should be linear
+
+obj := 60*40*z(1) + 80*33.75*z(2) + 500*z(3) + 100*z(4)
+
+! solve the problem and print solution
+maximize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..4 ) writeln(getsol(z(i)))
+
+end-model
+
+################################################################################
+Wed Nov 28 2018 09:34:59 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_subproblem1_dual_step4.mos with -g
+Running model
+Solution: -8880
+-2.08
+-1.44
+0
+0
+
+Process exited with code: 0
+################################################################################
+Subproblem2 Step 4:
+################################################################################
+model hw5prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ y : array(1..2) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+
+6*y(1) + 10*y(2) <= 60*40
+8*y(1) + 5*y(2) <= 80*33.75
+y(1) >= 0
+y(1) <= 300
+y(2) >= 0
+y(2) <= 300
+
+
+! The objective function should be linear
+
+obj := -28*y(1) - 32*y(2)
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..2) writeln(getsol(y(i)))
+
+end-model
+
+
+################################################################################
+Wed Nov 28 2018 09:39:17 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_subproblem2_step4.mos with -g
+Running model
+Solution: -10320
+300
+60
+
+Process exited with code: 0
+################################################################################
+Dual2 Step 4:
+model hw5prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ y : array(1..2) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+
+6*y(1) + 10*y(2) <= 60*40
+8*y(1) + 5*y(2) <= 80*33.75
+y(1) >= 0
+y(1) <= 300
+y(2) >= 0
+y(2) <= 300
+
+
+! The objective function should be linear
+
+obj := -28*y(1) - 32*y(2)
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..2) writeln(getsol(y(i)))
+
+end-model
+
+################################################################################
+Wed Nov 28 2018 09:40:51 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_subproblem2_step4.mos with -g
+Running model
+Solution: -10320
+300
+60
+
+Process exited with code: 0
+
+################################################################################
+RMP Step 4:
+################################################################################
+model hw4prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ x : array(1..2) of mpvar
+ theta : mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+theta is_free
+x(1) + x(2) <= 120
+x(1) >= 40
+x(2) >= 20
+theta >= -83.52*x(1) -180.48*x(2) - 520
+theta >= -211.2*x(1) - 1584
+theta >= -96*x(2) - 115.2*x(1) - 2104
+theta >= -165.12*x(1) - 46.08*x(2) - 1584
+
+
+
+! The objective function should be linear
+
+obj := 100*x(1) + 150*x(2) + theta
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..2) writeln(getsol(x(i)))
+writeln(getsol(theta))
+
+end-model
+################################################################################
+Wed Nov 28 2018 09:41:18 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_RMP_step4.mos with -g
+Running model
+Solution: -855.833
+46.6667
+36.25
+-10960
+
+Process exited with code: 0
+################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+Subproblem1 Step 5:
+################################################################################
+model hw5prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ y : array(1..2) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+
+6*y(1) + 10*y(2) <= 60*46.6667
+8*y(1) + 5*y(2) <= 80*36.25
+y(1) >= 0
+y(1) <= 500
+y(2) >= 0
+y(2) <= 100
+
+
+! The objective function should be linear
+
+obj := -24*y(1) - 28*y(2)
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..2) writeln(getsol(y(i)))
+
+end-model
+################################################################################
+Wed Nov 28 2018 09:44:00 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_subproblem1_step5.mos with -g
+Running model
+Solution: -10000
+300
+100
+
+Process exited with code: 0
+################################################################################
+Dual1 Step 5:
+################################################################################
+model hw5prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ z : array(1..4) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+
+forall (i in 1..4)
+z(i) is_free
+
+6*z(1) + 8*z(2) + z(3)  <=  -24
+10*z(1) + 5*z(2) + z(4) <= -28
+forall (i in 1..4)
+z(i) <= 0
+
+
+! The objective function should be linear
+
+obj := 60*46.667*z(1) + 80*36.25*z(2) + 500*z(3) + 100*z(4)
+
+! solve the problem and print solution
+maximize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..4 ) writeln(getsol(z(i)))
+
+end-model
+
+################################################################################
+Wed Nov 28 2018 09:44:43 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_subproblem1_dual_step5.mos with -g
+Running model
+Solution: -10000
+0
+-3
+0
+-13
+
+Process exited with code: 0
+################################################################################
+Subproblem2 Step 5:
+################################################################################
+model hw5prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ y : array(1..2) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+
+6*y(1) + 10*y(2) <= 60*46.6667
+8*y(1) + 5*y(2) <= 80*36.25
+y(1) >= 0
+y(1) <= 300
+y(2) >= 0
+y(2) <= 300
+
+
+! The objective function should be linear
+
+obj := -28*y(1) - 32*y(2)
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..2) writeln(getsol(y(i)))
+
+end-model
+################################################################################
+Wed Nov 28 2018 09:45:57 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_subproblem2_step5.mos with -g
+Running model
+Solution: -11600
+300
+100
+
+Process exited with code: 0
+################################################################################
+Dual2 Step 5:
+model hw5prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ z : array(1..4) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+
+forall (i in 1..4)
+z(i) is_free
+
+6*z(1) + 8*z(2) + z(3)  <=  -28
+10*z(1) + 5*z(2) + z(4) <= -32
+forall (i in 1..4)
+z(i) <= 0
+
+
+! The objective function should be linear
+
+obj := 60*46.6667*z(1) + 80*36.25*z(2) + 300*z(3) + 300*z(4)
+
+! solve the problem and print solution
+maximize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..4 ) writeln(getsol(z(i)))
+
+end-model
+################################################################################
+Wed Nov 28 2018 09:45:57 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling question1_subproblem2_step5.mos with -g
+Running model
+Solution: -11600
+300
+100
+
+Process exited with code: 0
+################################################################################
+################################################################################
+################################################################################
+################################################################################
+################################################################################
+################################################################################
+################################################################################
+################################################################################
+################################################################################
+################################################################################
+################################################################################
+
+Extensive Formulation:
+################################################################################
+model hw5prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ y_1 : array(1..2) of mpvar
+ y_2 : array(1..2) of mpvar
+ x: array(1..2) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+
+x(1) + x(2) <= 120
+x(1) >= 40
+x(2) >= 20
+6*y_1(1) + 10*y_1(2) <= 60*x(1)
+6*y_2(1) + 10*y_2(2) <= 60*x(1)
+8*y_1(1) + 5*y_1(2) <= 80*x(2)
+8*y_2(1) + 5*y_2(2) <= 80*x(2)
+y_1(1) >= 0
+y_1(2) >= 0
+y_2(1) >= 0
+y_2(2) >= 0
+y_1(1) <= 500
+y_1(2) <= 100
+y_2(1) <= 300
+y_2(2) <= 300
+
+
+! The objective function should be linear
+
+obj := 100*x(1) + 150*x(2) + 0.4*(-24*y_1(1) -28*y_1(2)) + 0.6*(-28*y_2(1) -32*y_2(2))
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..2) writeln("y_1: ",getsol(y_1(i)))
+forall(i in 1..2) writeln("y_2: ",getsol(y_2(i)))
+forall(i in 1..2) writeln("x: ",getsol(x(i)))
+
+
+end-model
+################################################################################
+Wed Nov 28 2018 10:51:25 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling extensive_solution_q1.mos with -g
+Running model
+Solution: -855.833
+y_1: 300
+y_1: 100
+y_2: 300
+y_2: 100
+x: 46.6667
+x: 36.25
+
+Process exited with code: 0
+
+################################################################################
+################################################################################
+################################################################################
+################################################################################
+Question 2 part 8
+################################################################################
+model "q2.8"
+uses "mmxprs"
+declarations
+M=1..9
+J=1..9
+K=1..9
+P=1
+z:array(M,J,K)of mpvar
+end-declarations
+
+z(1,1,8)=1
+z(3,2,7)=1
+z(2,3,3)=1
+z(2,4,6)=1
+z(3,5,9)=1
+z(3,7,2)=1
+z(4,2,5)=1
+z(6,4,1)=1
+z(5,5,4)=1
+z(4,6,7)=1
+z(5,6,5)=1
+z(5,7,7)=1
+z(5,7,7)=1
+z(6,8,3)=1
+z(7,3,1)=1
+z(8,3,8)=1
+z(9,2,9)=1
+z(8,4,5)=1
+z(8,4,5)=1
+z(9,7,4)=1
+z(7,8,6)=1
+z(8,8,1)=1
+z(7,9,8)=1
+
+
+forall(m in M,j in J, k in K) z(m,j,k) is_binary
+forall(j in J,k in K) sum(m in M)z(m,j,k)=1
+forall(m in M,k in K) sum(j in J)z(m,j,k)=1
+forall(m in M,j in J) sum(k in K)z(m,j,k)=1
+forall(k in K) sum(m in 1..3,j in 1..3) z(m,j,k)=1
+forall(k in K) sum(m in 1..3,j in 4..6) z(m,j,k)=1
+forall(k in K) sum(m in 1..3,j in 7..9) z(m,j,k)=1
+forall(k in K) sum(l in 4..6,j in 1..3) z(l,j,k)=1
+forall(k in K) sum(l in 4..6,j in 4..6) z(l,j,k)=1
+forall(k in K) sum(l in 4..6,j in 7..9) z(l,j,k)=1
+forall(k in K) sum(t in 7..9,j in 1..3) z(t,j,k)=1
+forall(k in K) sum(t in 7..9,j in 4..6) z(t,j,k)=1
+forall(k in K) sum(t in 7..9,j in 7..9) z(t,j,k)=1
+
+
+
+maximize(1)
+forall(m in M) do
+    forall(j in J, k in K) do
+        if getsol(z(m,j,k))=1
+        then
+            write(k, " ")
+        end-if
+    end-do
+    writeln("")
+
+end-do
+end-model
+
+
+################################################################################
+################################################################################
+
+Wed Nov 28 2018 10:52:24 GMT-0500 (EST)
+FICO Xpress Mosel 64-bit v4.8.4
+(c) Copyright Fair Isaac Corporation 2001-2018. All rights reserved
+Compiling q2.8.mos with -g
+Running model
+8 1 2 7 5 3 6 4 9
+9 4 3 6 8 2 1 7 5
+6 7 5 4 9 1 2 8 3
+1 5 4 2 3 7 8 9 6
+3 6 9 8 4 5 7 2 1
+2 8 7 1 6 9 5 3 4
+5 2 1 9 7 4 3 6 8
+4 3 8 5 2 6 9 1 7
+7 9 6 3 1 8 4 5 2
+
+Process exited with code: 0

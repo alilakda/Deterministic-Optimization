@@ -1,0 +1,389 @@
+Ali Mujtaba Lakdawala
+
+Pricing Step 1
+
+
+
+model hw4prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ y : array(1..3) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+forall (i in 1..3)
+    y(i) is_integer
+20*y(1) + 40*y(2) + 50*y(3) <= 170
+
+
+! The objective function should be linear
+
+obj := 1/4*y(1) + 1/4*y(2) + 1/2*y(3)
+
+! solve the problem and print solution
+maximize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..3) writeln(getsol(y(i)))
+
+end-model
+
+
+################################################################################
+################################################################################
+################################################################################
+
+Pricing Step 2
+
+model hw4prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ y : array(1..3) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+forall (i in 1..3)
+    y(i) is_integer
+20*y(1) + 40*y(2) + 50*y(3) <= 170
+
+
+! The objective function should be linear
+
+obj := 1/8*y(1) + 1/4*y(2) + 1/2*y(3)
+
+! solve the problem and print solution
+maximize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..3) writeln(getsol(y(i)))
+
+end-model
+
+
+
+################################################################################
+################################################################################
+################################################################################
+
+
+Pricing Step 3
+
+model hw4prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ y : array(1..3) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+forall (i in 1..3)
+    y(i) is_integer
+20*y(1) + 40*y(2) + 50*y(3) <= 170
+
+
+! The objective function should be linear
+
+obj := 1/8*y(1) + 1/4*y(2) + 7/24*y(3)
+
+! solve the problem and print solution
+maximize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..3) writeln(getsol(y(i)))
+
+end-model
+
+
+
+################################################################################
+################################################################################
+################################################################################
+
+Pricing Step 4
+
+model hw4prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ y : array(1..3) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+forall (i in 1..3)
+    y(i) is_integer
+20*y(1) + 40*y(2) + 50*y(3) <= 170
+
+
+! The objective function should be linear
+
+obj := 1/8*y(1) + 17/72*y(2) + 7/24*y(3)
+
+! solve the problem and print solution
+maximize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..3) writeln(getsol(y(i)))
+
+end-model
+
+
+
+################################################################################
+################################################################################
+################################################################################
+
+Pricing Step 5
+model hw4prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ y : array(1..3) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+forall (i in 1..3)
+    y(i) is_integer
+20*y(1) + 40*y(2) + 50*y(3) <= 170
+
+
+! The objective function should be linear
+
+obj := 2/17*y(1) + 4/17*y(2) + 5/17*y(3)
+
+! solve the problem and print solution
+maximize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..3) writeln(getsol(y(i)))
+
+end-model
+
+
+################################################################################
+################################################################################
+################################################################################
+
+RMP Step 1
+
+
+model hw4prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ x : array(1..3) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+4*x(1) >= 250
+4*x(2) >= 120
+2*x(3) >= 100
+
+
+! The objective function should be linear
+
+obj := x(1) + x(2) + x(3)
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..3) writeln(getsol(x(i)))
+
+end-model
+
+
+
+
+################################################################################
+################################################################################
+################################################################################
+
+RMP Step 2
+
+model hw4prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ x : array(1..4) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+4*x(1) + 8*x(4) = 250
+4*x(2) = 120
+2*x(3) = 100
+
+
+! The objective function should be linear
+
+obj := sum( i in 1 ..4) x(i)
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..4) writeln(getsol(x(i)))
+
+end-model
+
+
+
+
+################################################################################
+################################################################################
+################################################################################
+
+RMP Step 3
+
+model hw4prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ x : array(1..5) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+4*x(1) + 8*x(4) +1*x(5) = 250
+4*x(2) = 120
+2*x(3) + 3*x(5) = 100
+
+
+! The objective function should be linear
+
+obj := sum( i in 1 ..5) x(i)
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..5) writeln(getsol(x(i)))
+
+end-model
+
+
+
+################################################################################
+################################################################################
+################################################################################
+
+RMP Step 4
+
+
+model hw4prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ x : array(1..6) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+4*x(1) + 8*x(4) +1*x(5) = 250
+4*x(2) + 3*x(6) = 120
+2*x(3) + 3*x(5) + 1*x(6) = 100
+
+
+! The objective function should be linear
+
+obj := sum( i in 1 ..6) x(i)
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..6) writeln(getsol(x(i)))
+
+end-model
+
+
+
+
+################################################################################
+################################################################################
+################################################################################
+
+RMP Step 5
+
+model hw4prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ x : array(1..7) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+4*x(1) + 8*x(4) +1*x(5) + 6*x(7)= 250
+4*x(2) + 3*x(6) = 120
+2*x(3) + 3*x(5) + 1*x(6) +1*x(7) = 100
+
+
+! The objective function should be linear
+
+obj := sum( i in 1 ..7) x(i)
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..7) writeln(getsol(x(i)))
+
+end-model
+
+
+
+################################################################################
+################################################################################
+################################################################################
+
+
+

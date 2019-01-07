@@ -1,0 +1,63 @@
+model "q2.8"
+uses "mmxprs"
+declarations
+M=1..9
+J=1..9
+K=1..9
+P=1
+z:array(M,J,K)of mpvar
+end-declarations
+
+z(1,1,8)=1
+z(3,2,7)=1
+z(2,3,3)=1
+z(2,4,6)=1
+z(3,5,9)=1
+z(3,7,2)=1
+z(4,2,5)=1
+z(6,4,1)=1
+z(5,5,4)=1
+z(4,6,7)=1
+z(5,6,5)=1
+z(5,7,7)=1
+z(5,7,7)=1
+z(6,8,3)=1
+z(7,3,1)=1
+z(8,3,8)=1
+z(9,2,9)=1
+z(8,4,5)=1
+z(8,4,5)=1
+z(9,7,4)=1
+z(7,8,6)=1
+z(8,8,1)=1
+z(7,9,8)=1
+
+
+forall(m in M,j in J, k in K) z(m,j,k) is_binary
+forall(j in J,k in K) sum(m in M)z(m,j,k)=1
+forall(m in M,k in K) sum(j in J)z(m,j,k)=1
+forall(m in M,j in J) sum(k in K)z(m,j,k)=1
+forall(k in K) sum(m in 1..3,j in 1..3) z(m,j,k)=1
+forall(k in K) sum(m in 1..3,j in 4..6) z(m,j,k)=1
+forall(k in K) sum(m in 1..3,j in 7..9) z(m,j,k)=1
+forall(k in K) sum(l in 4..6,j in 1..3) z(l,j,k)=1
+forall(k in K) sum(l in 4..6,j in 4..6) z(l,j,k)=1
+forall(k in K) sum(l in 4..6,j in 7..9) z(l,j,k)=1
+forall(k in K) sum(t in 7..9,j in 1..3) z(t,j,k)=1
+forall(k in K) sum(t in 7..9,j in 4..6) z(t,j,k)=1
+forall(k in K) sum(t in 7..9,j in 7..9) z(t,j,k)=1
+
+
+
+maximize(1)
+forall(m in M) do
+    forall(j in J, k in K) do
+        if getsol(z(m,j,k))=1
+        then
+            write(k, " ")
+        end-if
+    end-do
+    writeln("")
+
+end-do
+end-model

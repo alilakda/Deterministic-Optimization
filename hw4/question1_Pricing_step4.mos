@@ -1,0 +1,29 @@
+model hw4prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ y : array(1..3) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+forall (i in 1..3)
+    y(i) is_integer
+20*y(1) + 40*y(2) + 50*y(3) <= 170
+
+
+! The objective function should be linear
+
+obj := 1/8*y(1) + 17/72*y(2) + 7/24*y(3)
+
+! solve the problem and print solution
+maximize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..3) writeln(getsol(y(i)))
+
+end-model

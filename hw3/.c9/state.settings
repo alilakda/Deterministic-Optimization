@@ -1,0 +1,627 @@
+{
+    "console": {
+        "@expanded": true,
+        "@height": "300",
+        "@maximized": "false",
+        "json()": {
+            "meta": {
+                "accessList": [
+                    "tab5",
+                    "tab4",
+                    "tab7",
+                    "tab10",
+                    "tab12",
+                    "tab13"
+                ]
+            },
+            "name": "pane1",
+            "nodes": [
+                {
+                    "type": "tab",
+                    "name": "tab4",
+                    "path": "",
+                    "className": [
+                        "tab4"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1539040127332
+                        },
+                        "filter": true,
+                        "title": "hw3dual3.mos - Idle",
+                        "tooltip": "hw3dual3.mos - Idle",
+                        "output": {
+                            "id": "output993041",
+                            "width": 928,
+                            "height": 268,
+                            "config": {
+                                "runner": "Mosel",
+                                "command": "hw3dual3.mos",
+                                "debug": false,
+                                "toolbar": true,
+                                "name": ""
+                            }
+                        }
+                    },
+                    "editorType": "output",
+                    "active": true
+                },
+                {
+                    "type": "tab",
+                    "name": "tab5",
+                    "path": "",
+                    "className": [
+                        "tab5"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "hw3primal1.mos - Stopped",
+                        "tooltip": "hw3primal1.mos - Stopped",
+                        "output": {
+                            "id": "output192463",
+                            "width": 928,
+                            "height": 268,
+                            "scrollTop": -1,
+                            "selection": {
+                                "start": {
+                                    "row": 0,
+                                    "column": 0
+                                },
+                                "end": {
+                                    "row": 15,
+                                    "column": 27
+                                },
+                                "isBackwards": true
+                            },
+                            "config": {
+                                "runner": "Mosel",
+                                "command": "hw3primal1.mos",
+                                "debug": false,
+                                "toolbar": true,
+                                "name": ""
+                            }
+                        },
+                        "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+                        "meta": {
+                            "timestamp": 1539040404172
+                        },
+                        "changed": false
+                    },
+                    "editorType": "output",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab7",
+                    "path": "",
+                    "className": [
+                        "tab7"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "hw3primal2.mos - Stopped",
+                        "tooltip": "hw3primal2.mos - Stopped",
+                        "output": {
+                            "id": "output2073015",
+                            "width": 928,
+                            "height": 268,
+                            "scrollTop": -1,
+                            "selection": {
+                                "start": {
+                                    "row": 0,
+                                    "column": 0
+                                },
+                                "end": {
+                                    "row": 15,
+                                    "column": 27
+                                },
+                                "isBackwards": true
+                            },
+                            "config": {
+                                "runner": "Mosel",
+                                "command": "hw3primal2.mos",
+                                "debug": false,
+                                "toolbar": true,
+                                "name": ""
+                            }
+                        },
+                        "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+                        "meta": {
+                            "timestamp": 1539043207810
+                        },
+                        "changed": false
+                    },
+                    "editorType": "output",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab10",
+                    "path": "",
+                    "className": [
+                        "tab10"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "hw3primal3.mos - Stopped",
+                        "tooltip": "hw3primal3.mos - Stopped",
+                        "output": {
+                            "id": "output9324618",
+                            "width": 928,
+                            "height": 268,
+                            "scrollTop": -1,
+                            "selection": {
+                                "start": {
+                                    "row": 0,
+                                    "column": 0
+                                },
+                                "end": {
+                                    "row": 15,
+                                    "column": 27
+                                },
+                                "isBackwards": true
+                            },
+                            "config": {
+                                "runner": "Mosel",
+                                "command": "hw3primal3.mos",
+                                "debug": false,
+                                "toolbar": true,
+                                "name": ""
+                            }
+                        },
+                        "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+                        "meta": {
+                            "timestamp": 1539043403825
+                        },
+                        "changed": false
+                    },
+                    "editorType": "output",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab12",
+                    "path": "",
+                    "className": [
+                        "tab12"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "hw3dual1.mos - Stopped",
+                        "tooltip": "hw3dual1.mos - Stopped",
+                        "output": {
+                            "id": "output3567924",
+                            "width": 928,
+                            "height": 268,
+                            "scrollTop": -1,
+                            "selection": {
+                                "start": {
+                                    "row": 0,
+                                    "column": 0
+                                },
+                                "end": {
+                                    "row": 16,
+                                    "column": 27
+                                },
+                                "isBackwards": true
+                            },
+                            "config": {
+                                "runner": "Mosel",
+                                "command": "hw3dual1.mos",
+                                "debug": false,
+                                "toolbar": true,
+                                "name": ""
+                            }
+                        },
+                        "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+                        "meta": {
+                            "timestamp": 1539056932361
+                        },
+                        "changed": false
+                    },
+                    "editorType": "output",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab13",
+                    "path": "",
+                    "className": [
+                        "tab13"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "hw3dual2.mos - Stopped",
+                        "tooltip": "hw3dual2.mos - Stopped",
+                        "output": {
+                            "id": "output4017027",
+                            "width": 928,
+                            "height": 268,
+                            "scrollTop": -1,
+                            "selection": {
+                                "start": {
+                                    "row": 0,
+                                    "column": 0
+                                },
+                                "end": {
+                                    "row": 16,
+                                    "column": 27
+                                },
+                                "isBackwards": true
+                            },
+                            "config": {
+                                "runner": "Mosel",
+                                "command": "hw3dual2.mos",
+                                "debug": false,
+                                "toolbar": true,
+                                "name": ""
+                            }
+                        },
+                        "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+                        "meta": {
+                            "timestamp": 1539057132646
+                        },
+                        "changed": false
+                    },
+                    "editorType": "output",
+                    "active": false
+                }
+            ],
+            "skin": "editor_tab",
+            "skinset": "default",
+            "type": "pane"
+        }
+    },
+    "ext": {
+        "counters": {
+            "@ace": 1,
+            "@acestatus": 1,
+            "@divider": 4,
+            "@document": 13,
+            "@form": 4,
+            "@menu": 3,
+            "@menuitem": 8,
+            "@pane": 2,
+            "@session": 7,
+            "@tab": 14,
+            "@undoManager": 13,
+            "@welcome": 1
+        }
+    },
+    "findinfiles": {
+        "@console": "true",
+        "@matchcase": "false",
+        "@regex": "false",
+        "@scope": "selection",
+        "@wholeword": "false"
+    },
+    "local": {
+        "window": {
+            "@fullscreen": false,
+            "@position": "0:23",
+            "@size": "1200:769"
+        }
+    },
+    "menus": {
+        "@minimized": "false"
+    },
+    "nak": {
+        "@installed": true
+    },
+    "od": {
+        "@last-run-config": "path:hw3dual3.mos"
+    },
+    "panecycle": {
+        "json()": [
+            "tab1",
+            "tab4"
+        ]
+    },
+    "panels": {
+        "@active-left": "tree",
+        "@active-right": "none",
+        "commands.panel": {
+            "@enabled": "true",
+            "@name": "commands.panel"
+        },
+        "debugger": {
+            "@enabled": "true",
+            "@name": "debugger"
+        },
+        "fico.om.sidebar": {
+            "@enabled": "true",
+            "@name": "fico.om.sidebar"
+        },
+        "navigate": {
+            "@enabled": "true",
+            "@name": "navigate"
+        },
+        "outline": {
+            "@enabled": "true",
+            "@name": "outline"
+        },
+        "tree": {
+            "@enabled": "true",
+            "@name": "tree"
+        }
+    },
+    "projecttree": {
+        "expanded": {
+            "json()": [
+                "/"
+            ]
+        }
+    },
+    "tabs": {
+        "json()": {
+            "focus": "/hw3primal1.mos",
+            "meta": {
+                "accessList": [
+                    "tab1",
+                    "tab11",
+                    "tab0",
+                    "tab3",
+                    "tab6",
+                    "tab8",
+                    "tab9"
+                ]
+            },
+            "name": "pane0",
+            "nodes": [
+                {
+                    "type": "tab",
+                    "name": "tab0",
+                    "path": "/readme.html",
+                    "className": [
+                        "tab0",
+                        "changed"
+                    ],
+                    "document": {
+                        "meta": {
+                            "welcome": true,
+                            "newOnError": true,
+                            "newfile": true,
+                            "timestamp": 1540742192947
+                        },
+                        "filter": true,
+                        "title": "Welcome",
+                        "tooltip": "/readme.html",
+                        "welcome": {},
+                        "changed": false
+                    },
+                    "editorType": "welcome",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab1",
+                    "path": "/hw3primal1.mos",
+                    "className": [
+                        "tab1",
+                        "focus"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1539043144000
+                        },
+                        "filter": true,
+                        "title": "hw3primal1.mos",
+                        "tooltip": "/hw3primal1.mos",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": true
+                },
+                {
+                    "type": "tab",
+                    "name": "tab3",
+                    "path": "/hw3dual1.mos",
+                    "className": [
+                        "tab3"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "hw3dual1.mos",
+                        "tooltip": "/hw3dual1.mos",
+                        "ace": {
+                            "folds": [],
+                            "scrolltop": 0,
+                            "scrollleft": 0,
+                            "selection": {
+                                "start": {
+                                    "row": 12,
+                                    "column": 16
+                                },
+                                "end": {
+                                    "row": 12,
+                                    "column": 16
+                                },
+                                "isBackwards": false
+                            },
+                            "options": {
+                                "guessTabSize": true,
+                                "useWrapMode": false,
+                                "wrapToView": true
+                            },
+                            "firstLineState": 0
+                        },
+                        "hash": "3a0b21343f744f724aa1f67293117adb9c197bcc",
+                        "meta": {
+                            "timestamp": 1539043267000
+                        },
+                        "changed": false
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab6",
+                    "path": "/hw3primal2.mos",
+                    "className": [
+                        "tab6"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "hw3primal2.mos",
+                        "tooltip": "/hw3primal2.mos",
+                        "ace": {
+                            "folds": [],
+                            "scrolltop": 0,
+                            "scrollleft": 0,
+                            "selection": {
+                                "start": {
+                                    "row": 0,
+                                    "column": 0
+                                },
+                                "end": {
+                                    "row": 32,
+                                    "column": 9
+                                },
+                                "isBackwards": true
+                            },
+                            "options": {
+                                "guessTabSize": true,
+                                "useWrapMode": false,
+                                "wrapToView": true
+                            },
+                            "firstLineState": 0
+                        },
+                        "hash": "b0b11fc7f64a4951dadc757120929dc3f0e03e8b",
+                        "meta": {
+                            "timestamp": 1539043222000
+                        },
+                        "changed": false
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab8",
+                    "path": "/hw3dual2.mos",
+                    "className": [
+                        "tab8"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "hw3dual2.mos",
+                        "tooltip": "/hw3dual2.mos",
+                        "ace": {
+                            "folds": [],
+                            "scrolltop": 282,
+                            "scrollleft": 0,
+                            "selection": {
+                                "start": {
+                                    "row": 0,
+                                    "column": 0
+                                },
+                                "end": {
+                                    "row": 34,
+                                    "column": 9
+                                },
+                                "isBackwards": false
+                            },
+                            "options": {
+                                "guessTabSize": true,
+                                "useWrapMode": false,
+                                "wrapToView": true
+                            },
+                            "firstLineState": {
+                                "row": 16,
+                                "state": "start",
+                                "mode": "plugins/fico.ide.language.mosel/mode/mosel"
+                            }
+                        },
+                        "hash": "ed1839efdca7bec763da2106c8412d819b746259",
+                        "meta": {
+                            "timestamp": 1539043337000
+                        },
+                        "changed": false
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab9",
+                    "path": "/hw3primal3.mos",
+                    "className": [
+                        "tab9"
+                    ],
+                    "document": {
+                        "filter": true,
+                        "title": "hw3primal3.mos",
+                        "tooltip": "/hw3primal3.mos",
+                        "ace": {
+                            "folds": [],
+                            "scrolltop": 0,
+                            "scrollleft": 0,
+                            "selection": {
+                                "start": {
+                                    "row": 0,
+                                    "column": 0
+                                },
+                                "end": {
+                                    "row": 32,
+                                    "column": 9
+                                },
+                                "isBackwards": false
+                            },
+                            "options": {
+                                "guessTabSize": true,
+                                "useWrapMode": false,
+                                "wrapToView": true
+                            },
+                            "firstLineState": {
+                                "row": 16,
+                                "state": "start",
+                                "mode": "plugins/fico.ide.language.mosel/mode/mosel"
+                            }
+                        },
+                        "hash": "16f92b050d8ff247086752531f50856bc2770c42",
+                        "meta": {
+                            "timestamp": 1539043394000
+                        },
+                        "changed": false
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab11",
+                    "path": "/hw3dual3.mos",
+                    "className": [
+                        "tab11"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1539043445000
+                        },
+                        "filter": true,
+                        "title": "hw3dual3.mos",
+                        "tooltip": "/hw3dual3.mos",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                }
+            ],
+            "skin": "editor_tab",
+            "skinset": "default",
+            "type": "pane"
+        }
+    },
+    "tree_selection": {
+        "json()": [
+            "/hw3dual2.mos"
+        ]
+    },
+    "welcome": {
+        "@first": true
+    }
+}

@@ -1,0 +1,32 @@
+model hw1prob2QP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+uses "mmquad" !notice you need to call this module to solve QP
+
+declarations
+ x : array(1..2) of mpvar
+ obj : qexp ! notice qexp is needed to define quadratic expression
+ z : array(1..2) of mpvar
+end-declarations
+
+! write the linear constraints here:
+z(1) + z(2) <= 1 
+x(1) >= -z(1)
+x(1) <= z(1)
+x(2) >= -z(2)
+x(2) <= z(2)
+z(1) >= 0
+z(2) >= 0
+
+
+
+! The objective function is a quadratic expression
+! for example, obj := x(1)^2 + x(2)^2 + 2*x(1)*x(2)
+obj := (x(1) - 1.5)^2 +  (x(2) - 0.8)^2
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+forall(i in 1..2) writeln(getsol(x(i)))
+
+end-model

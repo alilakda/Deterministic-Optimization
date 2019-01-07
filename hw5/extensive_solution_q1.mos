@@ -1,0 +1,47 @@
+model hw5prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ y_1 : array(1..2) of mpvar
+ y_2 : array(1..2) of mpvar
+ x: array(1..2) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+
+x(1) + x(2) <= 120
+x(1) >= 40
+x(2) >= 20
+6*y_1(1) + 10*y_1(2) <= 60*x(1)
+6*y_2(1) + 10*y_2(2) <= 60*x(1)
+8*y_1(1) + 5*y_1(2) <= 80*x(2)
+8*y_2(1) + 5*y_2(2) <= 80*x(2)
+y_1(1) >= 0
+y_1(2) >= 0
+y_2(1) >= 0
+y_2(2) >= 0
+y_1(1) <= 500
+y_1(2) <= 100
+y_2(1) <= 300
+y_2(2) <= 300
+
+
+! The objective function should be linear
+
+obj := 100*x(1) + 150*x(2) + 0.4*(-24*y_1(1) -28*y_1(2)) + 0.6*(-28*y_2(1) -32*y_2(2))
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..2) writeln("y_1: ",getsol(y_1(i)))
+forall(i in 1..2) writeln("y_2: ",getsol(y_2(i)))
+forall(i in 1..2) writeln("x: ",getsol(x(i)))
+
+
+end-model

@@ -1,0 +1,250 @@
+{
+    "ace": {
+        "search": {
+            "@backwards": "false",
+            "@highlightmatches": "true",
+            "@matchcase": true,
+            "@preservecase": "false",
+            "@regex": "false",
+            "@wholeword": "false",
+            "@wraparound": "true"
+        }
+    },
+    "breakpoints": {
+        "json()": []
+    },
+    "console": {
+        "@expanded": true,
+        "@height": "300",
+        "@maximized": "false",
+        "json()": {
+            "meta": {
+                "accessList": [
+                    "tab77",
+                    "tab76"
+                ]
+            },
+            "name": "pane1",
+            "nodes": [
+                {
+                    "type": "tab",
+                    "name": "tab76",
+                    "path": "",
+                    "className": [
+                        "tab76"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1543420285027
+                        },
+                        "filter": true,
+                        "title": "extensive_solution_q1.mos - Stopped",
+                        "tooltip": "extensive_solution_q1.mos - Stopped",
+                        "output": {
+                            "id": "output2651146",
+                            "width": 842,
+                            "height": 268,
+                            "config": {
+                                "runner": "Mosel",
+                                "command": "extensive_solution_q1.mos",
+                                "debug": false,
+                                "toolbar": true,
+                                "name": ""
+                            }
+                        }
+                    },
+                    "editorType": "output",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab77",
+                    "path": "",
+                    "className": [
+                        "tab77"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1543420343469
+                        },
+                        "filter": true,
+                        "title": "q2.8.mos - Stopped",
+                        "tooltip": "q2.8.mos - Stopped",
+                        "output": {
+                            "id": "output9532347",
+                            "width": 842,
+                            "height": 268,
+                            "config": {
+                                "runner": "Mosel",
+                                "command": "q2.8.mos",
+                                "debug": false,
+                                "toolbar": true
+                            }
+                        }
+                    },
+                    "editorType": "output",
+                    "active": true
+                }
+            ],
+            "skin": "editor_tab",
+            "skinset": "default",
+            "type": "pane"
+        }
+    },
+    "ext": {
+        "counters": {
+            "@ace": 1,
+            "@acestatus": 1,
+            "@divider": 4,
+            "@document": 87,
+            "@form": 4,
+            "@menu": 3,
+            "@menuitem": 8,
+            "@pane": 2,
+            "@session": 87,
+            "@tab": 78,
+            "@undoManager": 87,
+            "@welcome": 1
+        }
+    },
+    "findinfiles": {
+        "@console": "true",
+        "@matchcase": "false",
+        "@regex": "false",
+        "@scope": "selection",
+        "@wholeword": "false"
+    },
+    "local": {
+        "window": {
+            "@fullscreen": false,
+            "@maximized": false,
+            "@minimized": false,
+            "@position": "120:33",
+            "@size": "1200:747"
+        }
+    },
+    "menus": {
+        "@minimized": "false"
+    },
+    "nak": {
+        "@installed": true
+    },
+    "od": {
+        "@last-run-config": "path:extensive_solution_q1.mos"
+    },
+    "panecycle": {
+        "json()": [
+            "tab0",
+            "tab77"
+        ]
+    },
+    "panels": {
+        "@active-left": "tree",
+        "@active-right": "none",
+        "@width-left": 286,
+        "commands.panel": {
+            "@enabled": "true",
+            "@name": "commands.panel"
+        },
+        "debugger": {
+            "@enabled": "true",
+            "@name": "debugger"
+        },
+        "fico.om.sidebar": {
+            "@enabled": "true",
+            "@name": "fico.om.sidebar"
+        },
+        "navigate": {
+            "@enabled": "true",
+            "@name": "navigate"
+        },
+        "outline": {
+            "@enabled": "true",
+            "@name": "outline"
+        },
+        "tree": {
+            "@enabled": "true",
+            "@name": "tree"
+        }
+    },
+    "projecttree": {
+        "expanded": {
+            "json()": [
+                "/"
+            ]
+        }
+    },
+    "recentfiles": {
+        "json()": []
+    },
+    "search-history": {
+        "replace": {
+            "json()": [
+                "z",
+                "M",
+                "n",
+                "N",
+                "m",
+                "M",
+                "y"
+            ]
+        },
+        "search": {
+            "json()": [
+                "x",
+                "I"
+            ]
+        }
+    },
+    "tabs": {
+        "json()": {
+            "focus": "/readme.html",
+            "meta": {
+                "accessList": [
+                    "tab0"
+                ]
+            },
+            "name": "pane0",
+            "nodes": [
+                {
+                    "type": "tab",
+                    "name": "tab0",
+                    "path": "/readme.html",
+                    "className": [
+                        "tab0",
+                        "changed",
+                        "focus"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "welcome": true,
+                            "newOnError": true,
+                            "newfile": true,
+                            "timestamp": 1543090669645
+                        },
+                        "filter": true,
+                        "title": "Welcome",
+                        "tooltip": "/readme.html",
+                        "welcome": {}
+                    },
+                    "editorType": "welcome",
+                    "active": true
+                }
+            ],
+            "skin": "editor_tab",
+            "skinset": "default",
+            "type": "pane"
+        }
+    },
+    "tree_selection": {
+        "json()": [
+            "/extensive_solution_q1.mos"
+        ]
+    },
+    "welcome": {
+        "@first": true
+    }
+}

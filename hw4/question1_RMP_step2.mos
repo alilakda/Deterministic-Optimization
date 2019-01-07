@@ -1,0 +1,29 @@
+model hw4prob1LP
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+uses "mmsystem"
+
+
+declarations
+! you may need to define additional variables
+ x : array(1..4) of mpvar
+ obj : linctr
+end-declarations
+
+! write the linear constraints here:
+4*x(1) + 8*x(4) = 250
+4*x(2) = 120
+2*x(3) = 100
+
+
+! The objective function should be linear
+
+obj := sum( i in 1 ..4) x(i)
+
+! solve the problem and print solution
+minimize(obj)
+writeln("Solution: ", getobjval)
+
+! you need to print out all the variables
+forall(i in 1..4) writeln(getsol(x(i)))
+
+end-model
